@@ -13,6 +13,7 @@ module.exports = function(sequelize, DataTypes) {
     poundForPoundRank: DataTypes.STRING,
     ufcId: DataTypes.INTEGER,
     ufcThumbnail: DataTypes.STRING,
+    ufcBeltThumbnail: DataTypes.STRING,
     ufcLeftFullBodyImage: DataTypes.STRING,
     ufcProfileImage: DataTypes.STRING,
     ufcLink: DataTypes.STRING,

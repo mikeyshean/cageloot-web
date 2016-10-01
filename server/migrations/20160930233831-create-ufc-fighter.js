@@ -62,6 +62,12 @@ module.exports = {
         allowNull: true,
         defaultValue: null
       },
+      ufcBeltThumbnail: {
+        type: Sequelize.STRING,
+        isUrl: true,
+        allowNull: true,
+        defaultValue: null
+      },
       ufcLeftFullBodyImage: {
         type: Sequelize.STRING,
         isUrl: true,
