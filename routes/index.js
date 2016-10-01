@@ -11,7 +11,7 @@ router.route('/api/ufcfighters')
 
     // create a bear (accessed at POST http://localhost:8080/api/bears)
     .post(function(req, res) {
-        const { body } = req;
+        var body = req;
 
         models.UfcFighter.create({
           nameFirst: body.nameFirst,
