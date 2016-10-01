@@ -1,27 +1,37 @@
 var express = require('express');
 var router = express.Router();
+var models = require('../server/models/index');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.route('/bears')
+router.route('/api/ufcfighters')
 
     // create a bear (accessed at POST http://localhost:8080/api/bears)
     .post(function(req, res) {
+        const { body } = req;
 
-        var bear = new Bear();      // create a new instance of the Bear model
-        bear.name = req.body.name;  // set the bears name (comes from the request)
-
-        // save the bear and check for errors
-        bear.save(function(err) {
-            if (err)
-                res.send(err);
-
-            res.json({ message: 'Bear created!' });
+        models.UfcFighter.create({
+          nameFirst: body.nameFirst,
+          nameLast: body.nameLast,
+          nickname: body.nickname,
+          wins: body.wins
+        }).then(function(ufcFighter) {
+          res.json(ufcFighter);
+        }).catch(function(err) {
+          res.status(400).send(err);
         });
 
+    })
+
+    .get(function(req, res, next) {
+      models.UfcFighter.findAll({}).then(function(ufcFighters) {
+        res.json(ufcFighters);
+      }).catch(function(err) {
+        res.send(err);
+      });
     });
 
 module.exports = router;

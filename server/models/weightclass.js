@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
-        WeightClass.hasMany(models.UfcFighters);
+        WeightClass.hasMany(models.UfcFighter, { foreignKey: 'weightClassId' });
       }
     }
   });
