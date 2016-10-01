@@ -12,11 +12,11 @@ module.exports = function(sequelize, DataTypes) {
     isActive: DataTypes.BOOLEAN,
     poundForPoundRank: DataTypes.STRING,
     ufcId: DataTypes.INTEGER,
-    ufcThumbnail: DataTypes.STRING,
-    ufcBeltThumbnail: DataTypes.STRING,
-    ufcLeftFullBodyImage: DataTypes.STRING,
-    ufcProfileImage: DataTypes.STRING,
-    ufcLink: DataTypes.STRING,
+    thumbnail: DataTypes.STRING,
+    beltThumbnail: DataTypes.STRING,
+    leftFullBodyImage: DataTypes.STRING,
+    profileImage: DataTypes.STRING,
+    link: DataTypes.STRING,
     meta: DataTypes.JSONB
   }, {
     classMethods: {

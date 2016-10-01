@@ -56,31 +56,31 @@ module.exports = {
         type: Sequelize.INTEGER,
 
       },
-      ufcThumbnail: {
+      thumbnail: {
         type: Sequelize.STRING,
         isUrl: true,
         allowNull: true,
         defaultValue: null
       },
-      ufcBeltThumbnail: {
+      beltThumbnail: {
         type: Sequelize.STRING,
         isUrl: true,
         allowNull: true,
         defaultValue: null
       },
-      ufcLeftFullBodyImage: {
+      leftFullBodyImage: {
         type: Sequelize.STRING,
         isUrl: true,
         allowNull: true,
         defaultValue: null
       },
-      ufcProfileImage: {
+      profileImage: {
         type: Sequelize.STRING,
         isUrl: true,
         allowNull: true,
         defaultValue: null
       },
-      ufcLink: {
+      link: {
         type: Sequelize.STRING,
         isUrl: true,
         allowNull: true,
