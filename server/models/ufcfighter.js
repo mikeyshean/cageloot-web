@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
     nameFirst: DataTypes.STRING,
     nickname: DataTypes.STRING,
     nameLast: DataTypes.STRING,
-    // weightClassId: DataTypes.INTEGER,
+    weightClassId: DataTypes.INTEGER,
     titleHolder: DataTypes.BOOLEAN,
     wins: DataTypes.INTEGER,
     losses: DataTypes.INTEGER,
