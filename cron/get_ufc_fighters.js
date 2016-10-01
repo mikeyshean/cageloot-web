@@ -27,11 +27,11 @@ ufcApi.getFighters(function(fighters) {
           isActive: (fighter.fighter_status == "Active"),
           poundForPoundRank: fighter.pound_for_pound_rank,
           ufcId: fighter.id,
-          ufcThumbnail: fighter.thumbnail,
-          ufcBeltThumbNail: fighter.belt_thumbnail,
-          ufcLeftFullBodyImage: fighter.left_full_body_image,
-          ufcProfileImage: fighter.profile_image,
-          ufcLink: fighter.link,
+          thumbnail: fighter.thumbnail,
+          beltThumbNail: fighter.belt_thumbnail,
+          leftFullBodyImage: fighter.left_full_body_image,
+          profileImage: fighter.profile_image,
+          link: fighter.link,
           meta: fighter
         }
       })
