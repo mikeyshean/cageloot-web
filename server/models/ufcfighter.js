@@ -11,7 +11,10 @@ module.exports = function(sequelize, DataTypes) {
     draws: DataTypes.INTEGER,
     isActive: DataTypes.BOOLEAN,
     poundForPoundRank: DataTypes.STRING,
-    ufcId: DataTypes.INTEGER,
+    ufcId: {
+      type: DataTypes.INTEGER,
+      unique: true
+    },
     thumbnail: DataTypes.STRING,
     beltThumbnail: DataTypes.STRING,
     leftFullBodyImage: DataTypes.STRING,

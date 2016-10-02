@@ -1,3 +1,8 @@
 /node_modules/.bin/sequelize db:migrate:undo
 
 redefine models/migrations in camelCase
+
+- create stream upload of links
+- assign weight class id
+- seed weight classes
+- 
