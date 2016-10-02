@@ -13,7 +13,6 @@ function ufcApi() {
         console.log(err);
         return null;
       });
-
   }
 };
 

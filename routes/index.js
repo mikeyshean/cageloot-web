@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 
 router.route('/api/ufcfighters')
 
-    // create a bear (accessed at POST http://localhost:8080/api/bears)
+    // Create a fighter (accessed at POST http://localhost:3000/api/ufcfighters)
     .post(function(req, res) {
         var body = req.body;
 
@@ -26,8 +26,14 @@ router.route('/api/ufcfighters')
 
     })
 
+    // Get a list of all fighters
     .get(function(req, res, next) {
-      models.UfcFighter.findAll({}).then(function(ufcFighters) {
+      models.UfcFighter.findAll({
+        include: [{model: models.WeightClass, attributes: ['type']}],
+        attributes: {
+          exclude: ['createdAt', 'updatedAt', 'meta', 'WeightClassId']
+      }})
+      .then(function(ufcFighters) {
         res.json(ufcFighters);
       }).catch(function(err) {
         res.send(err);
